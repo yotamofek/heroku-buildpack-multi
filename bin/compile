@@ -61,6 +61,7 @@ for BUILDPACK in $(cat $1/.buildpacks); do
         echo $LIBRARY_PATH
         source $dir/export
         echo $LIBRARY_PATH
+        find / -iname "portaudio.h" 2>/dev/null
       else
         echo "#####"
       fi
