@@ -58,7 +58,9 @@ for BUILDPACK in $(cat $1/.buildpacks); do
       # check if the buildpack left behind an environment for subsequent ones
       if [ -e $dir/export ]; then
         echo "@@@@@"
+        echo $LIBRARY_PATH
         source $dir/export
+        echo $LIBRARY_PATH
       else
         echo "#####"
       fi
